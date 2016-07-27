@@ -7,8 +7,9 @@ hostname: coreos-master01
 users:
   - name: core
     passwd: $1$iHL8BbIK$4YbyA9WpKSQQpdYUxVnbA/
+    sudo: ['ALL=(ALL) NOPASSWD:ALL']
     groups:
-      - sudo: ['ALL=(ALL) NOPASSWD:ALL']
+      - sudo
       - docker
     shell: /bin/bash
 
