@@ -1,0 +1,16 @@
+#cloud-config
+#type: master
+
+---
+hostname: coreos-master01
+
+users:
+  - name: core
+    passwd: $1$iHL8BbIK$4YbyA9WpKSQQpdYUxVnbA/
+    groups:
+      - sudo: ['ALL=(ALL) NOPASSWD:ALL']
+      - docker
+    shell: /bin/bash
+
+ssh-authorized-keys:
+  - ssa-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCoNLFWoLOTGXCURSbBMrIE9+rDjNKsh711q4ETYrKkRqktAunRtbsUAMaYCh2TOogQwglp18kxlQatshVxQIj3iEcSh62G6iNcNQ1OK0Hi8F3F/yHh5uqkBj72LVZjRJRKDDj7QJmZcwqZsbEAKnv16OI6jOziRaVecd4ul4TDDiAtMmhyobDyzUZ/cSmwf1TtK2tAne2ZljaJkVpBDdbilPbVPY74RVg4V4VoO6r9c7+aKI41UBuCNPm9kn0VdFzd6djOxPXj/tLm7GjVe8TG9clhQMQDEXe4iB9iupj01TiRGs3xb3yOo3Uw30rwDXSMmTx1ccdir76TWMo8fDID
